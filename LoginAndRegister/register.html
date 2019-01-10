@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{background-color: #00CCFF;}
+			#register{width:400px;position:absolute;top:100px;left:450px}
+			#register .panel-heading{text-align: center;line-height: 30px;font-size: 24px;}
+			#register .panel-body button{display:block;margin:0 auto;width:100px;}
+			p{color:green;display: none;}
+		</style>
+		<script src="jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="register.js"></script>
+		<script>
+		$(function(){
+			$("#b1").click(function(){
+				$.ajax({
+				type: "post",
+				url: "register.php",
+				data: "username=" + $("#exampleInputEmail1").val() + "&password=" + $("#exampleInputPassword1").val() + "&passwordAgain=" + $("#exampleInputPassword2").val() + "&phoneNumber=" + $("#exampleInputPhone").val(),
+				success: function(data){
+							alert(data + "即将跳转到登录页面");
+							if(data == "注册成功"){
+								setTimeout(function(){
+									location.assign("login.html");
+								},1000);
+							}
+						},
+				error: function(msg){
+						alert(msg);
+					}
+
+				})
+			})
+		})
+		
+		
+		</script>
+	</head>
+	<body>
+		<div id="register" class="panel panel-default">
+		   <div class="panel-heading">注&nbsp;&nbsp;册</div>
+		   <div class="panel-body">
+		   		<div class="form-group">
+					<label for="exampleInputEmail1">用户名</label>
+				    <input type="text" class="form-control" name = "username" id="exampleInputEmail1" placeholder="请输入用户名">
+				    <p id="p1"></p>
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputPassword1">密码</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" name = "password" placeholder="请输入密码">
+				    <p id="p2"></p>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">确认密码</label>
+				    <input type="password" class="form-control" id="exampleInputPassword2" name = "passwordAgain" placeholder="请再次输入密码">
+				    <p id="p3"></p>
+				</div>
+				<div class="form-group">
+				    <label for="exampleInputPassword1">手机号验证</label>
+				    <input type="text" class="form-control" id="exampleInputPhone" name = "phoneNumber" placeholder="请输入手机号">
+				    <p id="p4"></p>
+				</div>
+				<button id="b1" class="btn btn-default" type="submit">注册</button>
+		   </div>
+		</div>
+	</body>
+</html>

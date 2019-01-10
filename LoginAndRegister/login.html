@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{background-color: #00CCFF;}
+			#login{width:400px;position:absolute;top:100px;left:450px}
+			#login .panel-heading{text-align: center;line-height: 30px;font-size: 24px;}
+			#login .panel-body #btns{position: relative;margin-bottom:10px;}
+			#login .panel-body #btns a{position: absolute;right: 0;top:5px;}
+			#login .panel-body #btns button{width:80px;}
+		</style>
+		<script src="jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="login.js"></script>
+		<script>
+		$(function(){
+			$("#loginBtn").click(function(){
+				$.ajax({
+					type:"post",
+					url:"login.php",
+					data: "username=" + $("#exampleInputEmail1").val() + "&password=" + $("#exampleInputPassword1").val(),
+					success:function(data){
+						alert(data);
+						if(data == "登录成功"){
+							setTimeout(function(){
+								location.assign("index.html");
+							},1000);
+						}
+					},
+
+					error:function(msg){
+						alert(msg);
+					}
+				});
+			})
+			
+		})
+		
+		</script>
+	</head>
+	<body>
+		<div id="" class="container">
+			<div id="login" class="panel panel-info">
+			  <div class="panel-heading">登&nbsp;&nbsp;录</div>
+			  <div class="panel-body">
+			    	<div class="form-group">
+					    <label for="exampleInputEmail1">用户名</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" name = "username" placeholder="请输入用户名">
+					</div>
+					<div class="form-group">
+					    <label for="exampleInputPassword1">密码</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" name = "password" placeholder="请输入密码">
+					</div>
+					<div id="btns">
+						<button id = "loginBtn" class="btn btn-default" type="submit">登录</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<button id="registerBtn" class="btn btn-default" type="submit">注册</button>
+						<a>忘记密码？</a>
+					</div>
+					<p>如果没有账号，请点击上方的注册按钮进行账号注册</p>
+			  </div>
+			</div>
+		</div>
+	</body>
+</html>

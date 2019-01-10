@@ -1,0 +1,541 @@
+@charset "UTF-8";
+#top{
+	position:relative;
+	width:442px;
+	height:12px;
+	position: absolute;
+	top:6px;
+	right:20px;
+	font-size: 12px;
+	color:#666666;
+	.top-d1{
+		float:left;
+		margin-right: 10px;
+	}
+	.top-d1 .top-p1 a{
+		color:#0084bb;
+	}
+	.top-ul1{
+		float:left;
+	    li{
+		float:left;
+		width:74px;
+		height:12px;
+		border-left: 1px solid #dddddd;
+		text-align: center;
+		line-height: 12px;
+		margin:2px 0 0 0;
+		&:first-child{
+			padding-left: 12px;
+			width:66px;
+			&:hover a{
+				color:#0084bb;
+			}
+		}
+
+		&:nth-child(2){
+			padding-left: 19px;
+			// margin:0;
+			// padding-top:1px;
+			// border-top:1px solid #dddddd;
+		}
+		// &:nth-child(3){
+		// 	margin:0;
+		// 	padding-top:2px;
+		// }
+			.li-d1 a{
+				width:10px;
+				height:8px;
+				float:left;
+				margin:3px 6px 0 0;
+				background-image: url("../images/img1.jpg");
+			}
+			a{
+				float:left;
+				color:#666666;
+			}
+			.li-d2 a{
+				width:6px;
+				height:4px;
+				float:left;
+				margin:6px 0 0 6px;
+				background-image: url("../images/img2.jpg");
+			}
+	    }
+	}
+	#top-ul2{
+		width:93px;
+		position:absolute;
+		top:12px;
+		right:151px;
+		border:1px solid #dddddd;
+		border-top:0;
+		display:none;
+	}
+	#top-ul2 li{
+		a{
+			display: block;
+			width:86px;
+			height:12px;
+			text-align:center;
+			padding:5px 8px 5px 0;
+			padding-right: 8px;
+			line-height:12px;
+			color:#666666;
+		}
+		&:first-child a{
+			margin:4px 0 0 0; 
+		}
+		&:hover a{
+			background: blue;
+			color:#fff;
+		}
+	}
+}
+#header{
+	width:1240px;
+	height:60px;
+	padding:26px 20px 4px 20px;
+	border-bottom: 2px solid #00afc7;
+	#header1{
+		width:1222px;
+		height:50px;
+		#logo{
+			width:130px;
+			height:50px;
+			float:left;
+			background:url("../images/logo.jpg");
+		}
+		#header-ul{
+			float:left;
+			padding:32px 0 0 10px;
+			.action{
+				background-image:url("../images/action.jpg");
+				background-size:100% 100%;
+				background-color: #fff;
+				position:relative;
+				z-index:2;
+			}
+			li{
+				float:left;
+				&:first-child a{
+					color:#0088a4;
+				}
+				/* 团购 度假*/
+				&:nth-child(4),&:nth-child(5),&:nth-child(7),&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(15){
+					position:relative;
+					a{
+						display:block;
+						height:32px;
+					}
+					.shop{
+						position:absolute;
+						top:31px;
+						left:-90px;
+						width:274px;
+						padding:8px;
+						border:1px solid #adaaaa;
+						background: #fff;
+						z-index: 1;
+						display:none;
+						li{
+							float:left;
+							a{
+								font-size:14px;
+								line-height:30px;
+								display:block;
+								padding:2px 8px;
+								font-weight:normal;
+								color:#5b5a5a;
+							}
+							&:hover a{
+								background:#bfe4f7;
+								color:#0883c3;
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+				&:nth-child(5){
+					.shop{
+						width:666px;
+						li:nth-child(9) a{
+							color:red;
+						}
+						.N{
+							width:9px;
+							height:9px;
+							background-image:url("../images/N.jpg");
+							position:absolute;
+							right:6px;
+							top:10px;
+						}
+						.H{
+							width:9px;
+							height:9px;
+							background-image:url("../images/H.jpg");
+							position:absolute;
+							right:150px;
+							top:10px;
+						}
+					}
+				}
+				&:nth-child(7){
+					.shop{
+						width:402px;
+						li:nth-child(2) a{
+							color:red;
+						}
+						.H{
+							width:9px;
+							height:9px;
+							background-image:url("../images/H.jpg");
+							position:absolute;
+							right:248px;
+							top:10px;
+						}
+					}
+				}
+				&:nth-child(9){
+					.shop{
+						width:450px;
+						li:nth-child(5) a{
+							color:red;
+						}
+						.H{
+							width:9px;
+							height:9px;
+							background-image:url("../images/H.jpg");
+							position:absolute;
+							right:124px;
+							top:10px;
+						}
+					}
+				}
+				&:nth-child(10){
+					.shop{
+						width:420px;
+						li:nth-child(2) a{
+							color:red;
+						}
+						.H{
+							width:9px;
+							height:9px;
+							background-image:url("../images/H.jpg");
+							position:absolute;
+							right:264px;
+							top:10px;
+						}
+					}
+				}
+				&:nth-child(11){
+					.shop{
+						width:302px;
+						li:nth-child(2) a,li:nth-child(3) a{
+							color:red;
+						}
+						.H{
+							width:9px;
+							height:9px;
+							background-image:url("../images/H.jpg");
+							position:absolute;
+							right:92px;
+							top:10px;
+						}
+						.N{
+							width:9px;
+							height:9px;
+							background-image:url("../images/N.jpg");
+							position:absolute;
+							right:164px;
+							top:10px;
+						}
+					}
+				}
+				&:nth-child(15){
+					.shop{
+						width:130px;
+						left:-40px;
+					}
+				}
+				&:nth-child(12){
+					position:relative;
+					#bus{
+						width:50px;
+						height:17px;
+						background:url("../images/bus.png");
+						position:absolute;
+						top:-16px;
+						left:12px;
+					}
+				}
+				a{
+					padding:0 12px;
+					color:#3c3c3c;
+					font-weight: bolder;
+				}
+				&:hover a{
+					color:#0088a4;
+				}
+			}
+		}
+		#header-right{
+			float:left;
+			width:137px;
+			height:42px;
+			margin:22px 0 0 57px;
+			background:url("../images/low.jpg") no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+}
+#aside{
+	width:1240px;
+	height:322px;
+	padding:14px 20px 0 20px;
+	#aside-d1{
+		width:1226px;
+		height:308px;
+		#aside-d1-left{
+			width:710px;
+			height:296px;
+			border: 6px solid #00afc7;
+			float:left;
+			position:relative;
+			// 左边导航
+			#nav{
+				position:relative;
+				width:70px;
+				height:296px;
+				li a{
+					display:block;
+					width:70px;
+					height:36px;
+					text-align:center;
+					line-height:36px;
+					background: #00afc7;
+					color:#fff;
+					border-top:1px solid #239eb6;
+				}
+				li:hover a{
+					color:#00afc7;
+					background:#fff;
+				}
+				li:first-child a{
+						border-top:0;
+						height:37px;
+						color:#00afc7;
+						background:#fff;
+				}
+				// “新”图标
+				.new{
+					width:15px;
+					height:15px;
+					background-image:url("../images/new.gif");
+					position:absolute;
+					top:266px;
+					left:60px;
+				}
+			}
+			// 右边内容
+			.Aticket{
+				width:640px;
+				height:296px;
+				position:absolute;
+				left:70px;
+				top:0;
+				// 机票内容
+				.airTicket{
+					position:absolute;
+					top:0;
+					left:0;
+					width:600px;
+					height:284px;
+					padding:6px 20px;
+					// 机票导航
+					.airTicket-ul{
+						width:600px;
+						height:32px;
+						border-bottom:1px solid #97d3d9;
+						li{
+							float:left;
+							&:first-child a{
+									color:#3f3f3f;
+									border-bottom:2px solid #098cb5;
+								}
+							a{
+								color:#999999;
+								display:block;
+								padding:3px 15px 6px;
+							}
+							&:nth-child(2):hover a{
+								color:#000;
+							}
+							&:nth-child(3){
+								margin-left:130px;
+							}
+							&:nth-child(3):hover a,&:nth-child(4):hover a{
+								text-decoration:underline;
+							}
+							&:nth-child(3) a,&:nth-child(4) a{
+								font-size:12px;
+								line-height:22px;
+							}
+							&:nth-child(3) a div{
+								width:14px;
+								height:13px;
+								margin:4px 10px 0 0;
+								float:left;
+								background-image:url("../images/img4.jpg");
+							}
+							&:nth-child(4) a div{
+								width:12px;
+								height:15px;
+								margin:4px 10px 0 0;
+								float:left;
+								background-image:url("../images/img3.jpg");
+							}
+						}
+					}
+					// 中间选择票务类型和时间
+					.airTicket-div{
+						width:604px;
+						height:214px;
+						background: #f4fbfc;
+						.radio{
+							padding:20px 0 0 30px;
+							font-size:14px;
+							input{
+								float:left;
+								margin-right:6px;
+							}
+							p{
+								float:left;
+								margin-right:20px;
+							}
+						}
+						.selectDate{
+							width:542px;
+							height:102px;
+							padding: 28px 0 0 30px;
+							position:relative;
+							div{
+								width:238px;
+								height:34px;
+								float:left;
+								border: 1px solid #cccccc;
+								background: #fff;
+								&:nth-child(1),&:nth-child(3){
+									margin-right: 40px;
+								}
+								&:nth-child(1),&:nth-child(2){
+									margin-bottom: 14px;
+								}
+								label{
+									font-size:14px;
+									width:36px;
+									height:34px;
+									float:left;
+									color:#999999;
+									line-height:34px;
+									&:hover{
+										cursor: pointer;
+									}
+								}
+								input{
+									float:left;
+									width:184px;
+									height:32px;
+									outline: none;
+								}
+								.date-pic{
+									display: block;
+									width:16px;
+									height:13px;
+									float:left;
+									margin:10px 0 0 0;
+									border:0;
+								}
+								&:nth-child(1) .date-pic,&:nth-child(3) .date-pic{
+									background-image:url("../images/ico1.jpg");
+								}
+								&:nth-child(2) .date-pic{
+									background-image:url("../images/ico2.jpg");
+								}
+								&:nth-child(4) .date-pic{
+									background-image:url("../images/ico3.jpg");
+								}
+							}
+							.exchange{
+								display:block;
+								width:22px;
+								height:55px;
+								position:absolute;
+								top:43px;
+								left:270px;
+								border:0;
+								background-image:url("../images/exchange1.jpg");
+								&:hover{
+									background-image:url("../images/exchange2.jpg");
+								}
+							}
+						}
+					}
+					//搜索按钮
+					.seek{
+						width:520px;
+						height:42px;
+						margin-left:30px;
+						p{
+							font-size:14px;
+							color:#666666;
+							float:left;
+							display:block;
+							height:42px;
+							line-height:42px;
+							b{
+								font-weight:bolder;
+							}
+						}
+						button{
+							float:right;
+							width:132px;
+							height:42px;
+							border: 0;
+							border-radius: 5px;
+							background-color:#ff5722;
+							font-size:18px;
+							&:hover{
+								background-color:#e85122;
+							}
+							a{
+								display:block;
+								width:132px;
+								height:42px;
+								line-height:42px;
+								color:#fff;
+								margin-left:-6px;
+							}
+						}
+					} 
+					.protect{
+						display:block;
+						margin:20px 0 0 0;
+						width:601px;
+						height:35px;
+						background-image:url("../images/flight_bar2.png");
+					}
+				}
+			}
+		}
+		// 右边大图片
+		#aside-d1-right{
+			width:490px;
+			height:308px;
+			float:left;
+			background:url("../images/aside-right.jpg") no-repeat;
+			background-size:100% 100%;
+			margin-left: 10px;
+		}
+	}
+}
